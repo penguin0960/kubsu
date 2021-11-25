@@ -2,44 +2,39 @@
 include \masm32\include\io.asm
 
 .data
-    A	DB	7	; ïðè óìíîæåíèè íà 2 ïîëó÷èòñÿ ñëîâî
-	B 	DB	4	; ïðè óìíîæåíèè íà 35 ïîóë÷èòñÿ ñëîâî
-	CC 	DD	31	; Ïðè äåëåíèè íà ñëîâî ïîëó÷èòñÿ ñëîâî
+    A	DB	7	; 
+	B 	DB	4	; 
+	CC 	DW	645	; 
 
 .code
     LStart:
     
     MOV AL, 2
-	MUL A			; ÷èñëèòåëü â àêêóìóëÿòîðå
+	MUL A
 	ADD AX, 145
 	MOV BL, 5
 	DIV BL
 	CBW
-	newline
-	outint AX
 	PUSH AX
 	
 	MOV AL, 35
 	MUL B
 	SUB AX, 11
-	newline
-	outint AX
+    
 	MOV BX, AX
-	MOV DX, 0
-	CWD
+	
+	MOV EAX, OFFSET CC
+	MOV AX, WORD PTR [CC]
+	
+	XOR DX, DX
 	DIV BX
+	
+	POP BX
+	SUB BX, AX
+	
 	newline
-	outint AX
+    outint BX
+
 	newline
 	inkey
-	;MOV AX, B
-	;MOV BL, 195
-	;DIV BL
-	;ADD ÀL, C
-	;XOR AH, AH		; ðàñøèðåíèå ïîëó÷åííîé ñóììû äî ñëîâà
-	;MOV BX, 529
-	;SUB BX, AX
-	;POP AX
-	;XOR DX, DX		; ðàñøèðåíèå ÷èñëèòåëÿ äî äâîéíîãî ñëîâà
-	;DIV BX		; ðåçóëüòàò â àêêóìóëÿòîðå
 end LStart
