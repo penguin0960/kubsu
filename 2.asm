@@ -2,117 +2,41 @@
 include \masm32\include\io.asm
 
 .data
-    A   DW  7, -3, 5, 2, 4,
-            8, -11, 27, 6, 4,
-            11, 1, 12, 55, 16,
-            -77, -21
-    N   DW  17
-    MIN DW  0
+    A	DB	40	    ; при умножении на 2 получится слово
+	B 	DB	8	    ; при умножении на 35 поулчится слово
+	CC 	DW	1076	; При делении на слово получится слово
+	RESULT DW 0
 
 .code
-LStart:
+    LStart:
     
-    ; array sort
-    
-    MOV CX, N
-    DEC CX
-    XOR EDI, EDI
+    MOV AL, 2 ; 4
+	MUL A	; 118-133
+	ADD AX, 145 ; 13
+	MOV BL, 5 ; 4
+	DIV BL ; 144-162
+	XOR AH, AH ; 3
 
-outer_cycle:
-    PUSH CX
-    
-    MOV ESI, EDI
-    inner_cycle:
-        ADD ESI, 2
-        MOV AX, [A][EDI]
-        MOV BX, [A][ESI]
-                
-        CMP AX, BX
-        JGE skip_replace
+	PUSH AX ; 15
+	
+	MOV AL, 35 ; 4
+	MUL B ; 118-133
+	SUB AX, 11 ; 3
 
-        MOV [A][EDI], BX
-        MOV [A][ESI], AX
-        
-    skip_replace:
-        DEC CX
-        JNZ inner_cycle
-    
-    ADD edi, 2
-    
-    POP CX
-    DEC CX
-    JNZ outer_cycle
-    
-    
-    ; replace bites in first 7 numbers
-    
-    
-    MOV CX, 7
-    XOR EDI, EDI
-    
-    
-replace_cycle:
-  
-    PUSH CX
-    MOV AX, [A][EDI]
-    
-    MOV BH, AH
-    MOV AH, AL
-    MOV AL, BH
-    
-    MOV [A][EDI], AX
-    
-    ADD EDI, 2
-    
-    POP CX
-    DEC CX
-    JNZ replace_cycle
-
-
-    ; find min uneven number
-    
-    
-    MOV BX, A
-    MOV CX, N
-    DEC CX
-    MOV EDI, 2
-    
-min_cycle:
-  
-    MOV AX, [A][EDI]
-    
-    TEST AX, 1
-    JZ continue_min_cycle
-    CMP AX, BX
-    JG continue_min_cycle
-    MOV BX, AX
-    
-continue_min_cycle:
-    ADD EDI, 2
-    DEC CX
-    JNZ min_cycle
-    
-    MOV MIN, BX
-    
-    
-    ; console output
-
-
-    MOV CX, N
-    XOR EDI, EDI
-
-output_cycle:
-  
-    MOV AX, [A][EDI]
-    
-    outint AX
-    newline
-    
-    ADD EDI, 2
-    
-    DEC CX
-    JNZ output_cycle
-    
-    inkey
+	MOV BX, AX ; 4
+	MOV AX, CC ; 4
+	XOR DX, DX ; 3
+	DIV BX ; 144-162
+	
+	POP BX ; 12
+	SUB BX, AX ; 3
+	
+	XOR AX, AX ; 3
+	MOV AX, 1 ; 4
+	MOV CL, 10 ; 4
+	SHL AX, CL ; 8 + 4 * 10 = 48
+	AND AX, DX ; 3
+	SHR AX, CL ; 48
+	MOV RESULT, AX ; 13
 
 end LStart
