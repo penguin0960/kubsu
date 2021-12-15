@@ -7,20 +7,19 @@ include \masm32\include\io.asm
             11, 1, 12, 55, 16,
             -77, -21
     N   DW  17
+    MIN DW  0
 
 .code
 LStart:
     
+    ; array sort
+    
     MOV CX, N
-    SUB CX, 1
+    DEC CX
     XOR EDI, EDI
 
-    push CX
-
-    inkey
-    
 outer_cycle:
-    push CX
+    PUSH CX
     
     MOV ESI, EDI
     inner_cycle:
@@ -40,19 +39,21 @@ outer_cycle:
     
     ADD edi, 2
     
-    pop CX
-    dec CX
+    POP CX
+    DEC CX
     JNZ outer_cycle
     
-    ; ---
     
-    MOV CX, 6
+    ; replace bites in first 7 numbers
+    
+    
+    MOV CX, 7
     XOR EDI, EDI
     
-    inkey
+    
 replace_cycle:
   
-    push CX
+    PUSH CX
     MOV AX, [A][EDI]
     
     MOV BH, AH
@@ -63,18 +64,19 @@ replace_cycle:
     
     ADD EDI, 2
     
-    pop CX
-    dec CX
+    POP CX
+    DEC CX
     JNZ replace_cycle
 
-    ; ---
+
+    ; find min uneven number
+    
     
     MOV BX, A
     MOV CX, N
     DEC CX
     MOV EDI, 2
     
-    inkey
 min_cycle:
   
     MOV AX, [A][EDI]
@@ -87,23 +89,20 @@ min_cycle:
     
 continue_min_cycle:
     ADD EDI, 2
-    dec CX
+    DEC CX
     JNZ min_cycle
     
-    newline
-    newline
-    outint BX
-    newline
+    MOV MIN, BX
     
-    ; ---
+    
+    ; console output
+
 
     MOV CX, N
     XOR EDI, EDI
-    
-    inkey
+
 output_cycle:
   
-    push CX
     MOV AX, [A][EDI]
     
     outint AX
@@ -111,8 +110,7 @@ output_cycle:
     
     ADD EDI, 2
     
-    pop CX
-    dec CX
+    DEC CX
     JNZ output_cycle
     
     inkey
