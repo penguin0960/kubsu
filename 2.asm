@@ -12,6 +12,8 @@ include \masm32\include\io.asm
 .code
 LStart:
     
+    ; array sort
+    
     MOV CX, N
     DEC CX
     XOR EDI, EDI
@@ -42,7 +44,7 @@ outer_cycle:
     JNZ outer_cycle
     
     
-    ; ---
+    ; replace bites in first 7 numbers
     
     
     MOV CX, 7
@@ -67,7 +69,7 @@ replace_cycle:
     JNZ replace_cycle
 
 
-    ; ---
+    ; find min uneven number
     
     
     MOV BX, A
@@ -93,7 +95,7 @@ continue_min_cycle:
     MOV MIN, BX
     
     
-    ; ---
+    ; console output
 
 
     MOV CX, N
