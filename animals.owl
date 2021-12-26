@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:untitled-ontology-6="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Питается -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Питается">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Связан"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Является_добычей"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Связан -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Связан"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Является_добычей -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Является_добычей">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Связан"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Беспозвоночное -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Беспозвоночное">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Многоклеточное"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Всеядное -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Всеядное">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Животное"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Животное -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Животное"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Млекопитающее -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Млекопитающее">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Теплокровное"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Многоклеточное -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Многоклеточное">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Животное"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Насекомоядное -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Насекомоядное">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Животное"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Одноклеточное -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Одноклеточное">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Животное"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Позвоночное -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Позвоночное">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Многоклеточное"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Птица -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Птица">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Теплокровное"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Теплокровное -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Теплокровное">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Позвоночное"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Травоядное -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Травоядное">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Животное"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Хищник -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Хищник">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Животное"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Холоднокровное -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Холоднокровное">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Позвоночное"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Волк -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Волк">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Животное"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Млекопитающее"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Хищник"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Змея -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Змея">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Животное"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Хищник"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Холоднокровное"/>
+        <Питается rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Мышь"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Кролик -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Кролик">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Животное"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Млекопитающее"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Травоядное"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Лиса -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Лиса">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Животное"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Млекопитающее"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Хищник"/>
+        <Питается rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Кролик"/>
+        <Питается rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Мышь"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Мышь -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Мышь">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Животное"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Ястреб -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Ястреб">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Животное"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Птица"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Хищник"/>
+        <Питается rdf:resource="http://www.semanticweb.org/user/ontologies/2021/11/untitled-ontology-6#Мышь"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
